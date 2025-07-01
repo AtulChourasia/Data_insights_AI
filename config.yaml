@@ -1,0 +1,30 @@
+sql_capabilities: |
+  SQLite SQL Capabilities:
+  - Aggregate functions: COUNT(), SUM(), AVG(), MIN(), MAX(), TOTAL()
+  - Filtering: WHERE, LIKE, BETWEEN, IN, IS NULL, IS NOT NULL
+  - Logical operators: AND, OR, NOT
+  - Grouping: GROUP BY, HAVING
+  - Sorting: ORDER BY (ASC/DESC), COLLATE
+  - Joins: INNER JOIN, LEFT JOIN, RIGHT JOIN (simulated via LEFT JOIN + COALESCE), CROSS JOIN
+  - Subqueries: Supported in SELECT, FROM, WHERE, and HAVING clauses
+  - Set operations: UNION, UNION ALL, INTERSECT, EXCEPT
+  - Date and time functions: date(), time(), datetime(), julianday(), strftime()
+  - String functions: LENGTH(), UPPER(), LOWER(), SUBSTR(), TRIM(), REPLACE(), INSTR()
+  - Math functions: ABS(), ROUND(), CEIL(), FLOOR(), RANDOM(), POW(), SQRT()
+  - Type casting: CAST(expr AS TYPE)
+  - Case expressions: CASE WHEN ... THEN ... ELSE ... END
+  - Column constraints: PRIMARY KEY, NOT NULL, UNIQUE, DEFAULT, CHECK
+  - Table constraints: FOREIGN KEY (limited enforcement depending on pragma)
+  - Indexes: CREATE INDEX, UNIQUE INDEX
+  - Views: CREATE VIEW, DROP VIEW
+  - Transactions: BEGIN, COMMIT, ROLLBACK
+  - PRAGMA statements: Used for metadata and configuration (e.g., `PRAGMA table_info(table_name);`)
+  - Common Table Expressions (CTEs): WITH clause
+  - Window functions: ROW_NUMBER(), RANK(), DENSE_RANK(), NTILE(), LEAD(), LAG(), FIRST_VALUE(), LAST_VALUE(), OVER(PARTITION BY ... ORDER BY ...)
+  - JSON functions (SQLite ≥ 3.38): json(), json_extract(), json_object(), json_array(), json_each(), json_type(), etc.
+  - Full-text search (FTS5 module): MATCH operator, full-text indexes (if enabled)
+  - Manual statistical functions:
+      - STDDEV(): Simulate using SQRT(AVG(column * column) - AVG(column) * AVG(column))
+      - VARIANCE(): AVG(column * column) - AVG(column) * AVG(column)
+
+css_file_path: "style.css"
